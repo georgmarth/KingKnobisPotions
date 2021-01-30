@@ -1,10 +1,10 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class TimerUIElement : MonoBehaviour
 {
-    [SerializeField] private Text _text;
+    [SerializeField] private TextMeshProUGUI _text;
     
     private void Start()
     {
