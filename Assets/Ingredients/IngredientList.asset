@@ -15,6 +15,12 @@ MonoBehaviour:
   _colorIngredients:
   - {fileID: 11400000, guid: b1ed63c5a1005e84b9d77a00f39aa5aa, type: 2}
   - {fileID: 11400000, guid: 5ecd89df0c747d9409f6c24dad168928, type: 2}
+  - {fileID: 11400000, guid: 26f0d94c26fdfe444ad4b4b6fe20a073, type: 2}
+  - {fileID: 11400000, guid: f897e347b0fde0d4881fbf025d47060f, type: 2}
+  - {fileID: 11400000, guid: f181c5ed3f8a56044b73ec5ec0950d46, type: 2}
   _symbolIngredients:
   - {fileID: 11400000, guid: 9151fc4e6f20eb147983727b111171b8, type: 2}
   - {fileID: 11400000, guid: 19b4523a0c4f8a34c98187f7e721bf8a, type: 2}
+  - {fileID: 11400000, guid: 1d2f947d1df219d46a56936cf6fc99f4, type: 2}
+  - {fileID: 11400000, guid: eb1f31e117c022e40b919ea2a67c4091, type: 2}
+  - {fileID: 11400000, guid: 6d630ed72ecece14db719263059ee628, type: 2}
