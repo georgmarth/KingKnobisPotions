@@ -2,7 +2,7 @@
 using TMPro;
 using UnityEngine;
 
-public class TimerUIElement : MonoBehaviour
+public class TimerDisplay : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _text;
     
@@ -13,7 +13,7 @@ public class TimerUIElement : MonoBehaviour
 
     private void OnTimeElapsed(TimeElapsedEvent evt)
     {
-        _text.text = $"Time elapsed: {TimeLeft(evt.ElapsedTime):mm\\:ss\\:FFF}";
+        _text.text = $"Time Left {TimeLeft(evt.ElapsedTime):mm\\.ss}";
     }
 
     private TimeSpan TimeLeft(TimeSpan timeElapsed)
