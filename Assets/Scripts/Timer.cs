@@ -38,7 +38,7 @@ public class Timer : Singleton<Timer>
         if (_timerRunning)
         {
             ElapsedTime += TimeSpan.FromSeconds(Time.deltaTime);
-            MessageBus.Instance.Publish(new TimeElapsedEvent{ElapsedTime = ElapsedTime});
+            MessageBus.Instance.Publish(new TimeElapsedEvent{ElapsedTime = ElapsedTime}, false);
         }
     }
 }

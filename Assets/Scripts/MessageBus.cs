@@ -5,7 +5,7 @@ using UnityEngine;
 public class MessageBus : Singleton<MessageBus>
 {
     private readonly Dictionary<Type, List<object>> _subscriptions = new Dictionary<Type, List<object>>();
-    [SerializeField] private bool _log;
+    [SerializeField] private bool _log = true;
     
     public void Subscribe<T>(Action<T> action)
     {
@@ -14,10 +14,10 @@ public class MessageBus : Singleton<MessageBus>
             _subscriptions.Add(type, new List<object>());
         _subscriptions[type].Add(action);
     }
-    
-    public void Publish<T>(T message)
+
+    public void Publish<T>(T message, bool? logOverride = null)
     {
-        if (_log)
+        if (logOverride ??_log)
             Debug.Log(message.ToString());
         if (_subscriptions.ContainsKey(typeof(T)))
         {
