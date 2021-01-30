@@ -1,20 +1,27 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class Ingredient : MonoBehaviour
 {
-    [SerializeField] private bool _shouldReset; 
-    
+    [SerializeField] private bool _shouldReset;
+    [SerializeField] private Renderer _spriteRenderer;
+    public int _id;
+
     private bool _dragging;
     private bool _onCauldron;
     private Camera _camera;
     private Vector3 _initialPosition;
 
+    private IngredientsAnimator _animator;
+    
+
     private void Start()
     {
         _camera = Camera.main;
         _initialPosition = transform.position;
+        _animator = new IngredientsAnimator { _animator = GetComponent<Animator>() };
         
-        MessageBus.Instance.Subscribe<DropIngredientEvent>(_ => PutInCauldron());
+        MessageBus.Instance.Subscribe<DropIngredientEvent>(evt => PutInCauldron(evt.Ingredient));
     }
 
     private void Update()
@@ -35,14 +42,14 @@ public class Ingredient : MonoBehaviour
 
     private void OnMouseDown()
     {
-        GetComponent<Renderer>().material.color = Color.yellow;
+        _spriteRenderer.material.color = Color.yellow;
         _dragging = true;
         MessageBus.Instance.Publish(Input.mousePosition);
     }
 
     private void OnMouseUp()
     {
-        GetComponent<Renderer>().material.color = Color.red;
+        _spriteRenderer.material.color = Color.red;
         _dragging = false;
 
         if (_onCauldron)
@@ -56,17 +63,20 @@ public class Ingredient : MonoBehaviour
         MessageBus.Instance.Publish(new DropIngredientEvent {Ingredient = this});
     }
 
-    private void PutInCauldron()
-    {
-        Destroy(gameObject);
+    private void PutInCauldron(Ingredient ingredient) {
+        if (this == ingredient)     
+        { 
+        _animator.PlayDropingInCauldron();
+        StartCoroutine("DestroyIngredient");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.gameObject.CompareTag("Cauldron"))
             return;
-        
-        GetComponent<Renderer>().material.color = Color.magenta;
+
+        _spriteRenderer.material.color = Color.magenta;
         _onCauldron = true;
     }
 
@@ -75,7 +85,15 @@ public class Ingredient : MonoBehaviour
         if (!other.gameObject.CompareTag("Cauldron"))
             return;
 
-        GetComponent<Renderer>().material.color = Color.yellow;
+        _spriteRenderer.material.color = Color.yellow;
         _onCauldron = false;
     }
+
+
+
+    IEnumerator DestroyIngredient() {
+        yield return new WaitForSeconds(4);
+        Destroy(gameObject);
+    }
 }
+

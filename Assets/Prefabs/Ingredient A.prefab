@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3730494232325518409}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.457, y: 0.7483, z: 0}
+  m_LocalPosition: {x: 7.1273828, y: 0.22825654, z: -0.40342784}
   m_LocalScale: {x: 10.462258, y: 10.353872, z: 1}
   m_Children:
   - {fileID: 9009939910336680597}
@@ -74,6 +74,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shouldReset: 1
+  _spriteRenderer: {fileID: 7833550317260347151}
+  _id: 1
 --- !u!50 &3730494232325518404
 Rigidbody2D:
   serializedVersion: 4
@@ -124,7 +126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9009939910336680597}
   - component: {fileID: 7833550317260347151}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ingredient Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,8 +186,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.8588236, g: 0.23137257, b: 0.20392159, a: 1}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

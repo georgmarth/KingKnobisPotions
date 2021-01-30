@@ -1,4 +1,4 @@
-﻿%YAML 1.1
+%YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
@@ -12,4 +12,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5ee00f5be7544aeadec69eb3cbda6b4, type: 3}
   m_Name: Frog
   m_EditorClassIdentifier: 
-  Name: Frog
