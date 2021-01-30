@@ -4,10 +4,7 @@ public class MainGameLoop : Singleton<MainGameLoop>
 {
     [SerializeField] private int _timeOutInSeconds = 5;
 
-    public int TimeOutInSeconds
-    {
-        get { return _timeOutInSeconds; }
-    }
+    public int TimeOutInSeconds => _timeOutInSeconds;
 
     private void Start()
     {
