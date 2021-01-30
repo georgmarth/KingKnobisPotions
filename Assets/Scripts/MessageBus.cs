@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class MessageBus
+public class MessageBus : Singleton<MessageBus>
 {
-    private static readonly Dictionary<Type, List<object>> _subscriptions = new Dictionary<Type, List<object>>();
+    private readonly Dictionary<Type, List<object>> _subscriptions = new Dictionary<Type, List<object>>();
     
-    public static void Subscribe<T>(Action<T> action)
+    public void Subscribe<T>(Action<T> action)
     {
         var type = typeof(T);
         if (!_subscriptions.ContainsKey(type)) 
@@ -14,7 +14,7 @@ public static class MessageBus
         _subscriptions[type].Add(action);
     }
     
-    public static void Publish<T>(T message)
+    public void Publish<T>(T message)
     {
         Debug.Log(message.ToString());
         if (_subscriptions.ContainsKey(typeof(T)))
@@ -26,7 +26,7 @@ public static class MessageBus
         }
     }
 
-    public static void ClearSubscriptions()
+    private void OnDestroy()
     {
         _subscriptions.Clear();
     }

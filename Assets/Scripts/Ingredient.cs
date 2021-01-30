@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Ingredient : MonoBehaviour
 {
@@ -15,7 +14,7 @@ public class Ingredient : MonoBehaviour
         _camera = Camera.main;
         _initialPosition = transform.position;
         
-        MessageBus.Subscribe<DestroyCommand>(_ => PutInCauldron());
+        MessageBus.Instance.Subscribe<DestroyCommand>(_ => PutInCauldron());
     }
 
     private void Update()
@@ -38,7 +37,7 @@ public class Ingredient : MonoBehaviour
     {
         GetComponent<Renderer>().material.color = Color.yellow;
         _dragging = true;
-        MessageBus.Publish(Input.mousePosition);
+        MessageBus.Instance.Publish(Input.mousePosition);
     }
 
     private void OnMouseUp()
@@ -54,7 +53,7 @@ public class Ingredient : MonoBehaviour
 
     private void PublishDestroyCommand()
     {
-        MessageBus.Publish(new DestroyCommand {Ingredient = this});
+        MessageBus.Instance.Publish(new DestroyCommand {Ingredient = this});
     }
 
     private void PutInCauldron()
