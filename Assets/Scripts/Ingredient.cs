@@ -14,7 +14,7 @@ public class Ingredient : MonoBehaviour
         _camera = Camera.main;
         _initialPosition = transform.position;
         
-        MessageBus.Instance.Subscribe<DestroyCommand>(_ => PutInCauldron());
+        MessageBus.Instance.Subscribe<DropIngredientEvent>(_ => PutInCauldron());
     }
 
     private void Update()
@@ -53,7 +53,7 @@ public class Ingredient : MonoBehaviour
 
     private void PublishDestroyCommand()
     {
-        MessageBus.Instance.Publish(new DestroyCommand {Ingredient = this});
+        MessageBus.Instance.Publish(new DropIngredientEvent {Ingredient = this});
     }
 
     private void PutInCauldron()

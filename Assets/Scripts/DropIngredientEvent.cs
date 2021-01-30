@@ -1,4 +1,4 @@
-﻿public class DestroyCommand
+﻿public class DropIngredientEvent
 {
     public Ingredient Ingredient;
 }
