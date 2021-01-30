@@ -4,19 +4,19 @@ using System.Linq;
 public class Potion
 {
     public Recipe Recipe { get; }
-    private readonly List<IIngredient> _ingredients;
+    private readonly List<IngredientData> _ingredients;
 
     public Potion(Recipe recipe)
     {
         Recipe = recipe;
-        _ingredients = new List<IIngredient>();
+        _ingredients = new List<IngredientData>();
     }
 
-    public void AddIngredient(IIngredient Ingredient)
+    public void AddIngredient(IngredientData ingredientData)
     {
-        _ingredients.Add(Ingredient);
+        _ingredients.Add(ingredientData);
         if (IsWrong)
-            MessageBus.Instance.Publish(new WrongIngredientEvent{Potion = this, Ingredient = Ingredient});
+            MessageBus.Instance.Publish(new WrongIngredientEvent{Potion = this, IngredientData = ingredientData});
         else if (IsCorrect)
             MessageBus.Instance.Publish(new PotionCorrectEvent{Potion = this});
     }

@@ -22,7 +22,7 @@ public class IngredientSpawner : MonoBehaviour
 
 
     private void TrySpawnIngredient(DropIngredientEvent evt) {
-        if(_ingredient._id == evt.Ingredient._id) {
+        if(_ingredient.IngredientData == evt.Ingredient.IngredientData) {
             SpawnIngredient();
         }
     }

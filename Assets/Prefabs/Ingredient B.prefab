@@ -156,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shouldReset: 1
   _spriteRenderer: {fileID: 1982452503607937907}
-  _id: 2
+  IngredientData: {fileID: 11400000, guid: 5ecd89df0c747d9409f6c24dad168928, type: 2}
 --- !u!50 &4967516789026515000
 Rigidbody2D:
   serializedVersion: 4

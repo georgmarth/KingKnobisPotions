@@ -5,7 +5,7 @@ public class Ingredient : MonoBehaviour
 {
     [SerializeField] private bool _shouldReset;
     [SerializeField] private Renderer _spriteRenderer;
-    public int _id;
+    public IngredientData IngredientData;
 
     private bool _dragging;
     private bool _onCauldron;

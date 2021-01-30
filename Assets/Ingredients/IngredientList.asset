@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f07c11c78ffa454fba1a71579d17ac7c, type: 3}
   m_Name: IngredientList
   m_EditorClassIdentifier: 
+  _colorIngredients:
+  - {fileID: 11400000, guid: b1ed63c5a1005e84b9d77a00f39aa5aa, type: 2}
+  - {fileID: 11400000, guid: 5ecd89df0c747d9409f6c24dad168928, type: 2}
+  _symbolIngredients:
+  - {fileID: 11400000, guid: 9151fc4e6f20eb147983727b111171b8, type: 2}
+  - {fileID: 11400000, guid: 19b4523a0c4f8a34c98187f7e721bf8a, type: 2}

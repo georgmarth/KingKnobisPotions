@@ -7,7 +7,7 @@ public class StartButton : MonoBehaviour
     
     public void OnStartButtonClick()
     {
-        Timer.Instance.StartTimer();
+        MainGameLoop.Instance.StartGame();
         _startScreen.SetActive(false);
     }
 }
