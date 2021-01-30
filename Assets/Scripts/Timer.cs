@@ -27,6 +27,12 @@ public class Timer : Singleton<Timer>
         _timerRunning = false;
     }
 
+    public void StopTimer()
+    {
+        _timerRunning = false;
+        ResetTimer();
+    }
+
     private void Update()
     {
         if (_timerRunning)
