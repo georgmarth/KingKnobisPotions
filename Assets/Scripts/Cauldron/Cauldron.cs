@@ -6,6 +6,10 @@ public class Cauldron : MonoBehaviour {
 
     private Potion _potion;
 
+    private CauldronEffects _effects;
+
+    public bool canAddIngredient = true;
+
 
     public void NewPotion(Recipe recipe) { //subscribe this to recipe created
 
@@ -15,5 +19,20 @@ public class Cauldron : MonoBehaviour {
 
     public void FlushPotion() { //subscribe to this flushevent -- automatic or by player button
 
+    }
+
+    public void IngredientAdded() { //subscribe to DropIngredient event with a delay corrutine.
+
+    }
+
+
+
+    IEnumerator PlayPotionEffects() {
+        yield return new WaitForSeconds(2);
+
+        // leen color
+
+        // 
+        
     }
 }
