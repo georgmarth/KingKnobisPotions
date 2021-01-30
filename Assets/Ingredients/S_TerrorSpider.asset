@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3659c1eaeeb41c7ad3cee31d52ee62a, type: 3}
   m_Name: S_TerrorSpider
   m_EditorClassIdentifier: 
-  _symbol: {fileID: 0}
+  _symbol: {fileID: 21300000, guid: 3eba064bbddb34e49b1d23e6970839da, type: 3}
   _name: Terror

@@ -42,17 +42,20 @@ TagManager:
   - name: Background
     uniqueID: 245307757
     locked: 0
-  - name: Cauldron
-    uniqueID: 3365734907
-    locked: 0
   - name: Main Char
     uniqueID: 3586315747
+    locked: 0
+  - name: Cauldron
+    uniqueID: 3365734907
     locked: 0
   - name: King Knossi
     uniqueID: 2227899801
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Potion
+    uniqueID: 188916205
     locked: 0
   - name: Ingredient
     uniqueID: 655189233
