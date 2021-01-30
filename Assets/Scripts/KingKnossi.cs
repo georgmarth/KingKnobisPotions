@@ -3,8 +3,8 @@ using UnityEngine.UI;
 
 public class KingKnossi : MonoBehaviour
 {
-    [SerializeField] private Text _effectText;
-    [SerializeField] private Image _potionImage;
+    [SerializeField] private Image _effectImage;
+    [SerializeField] private SpriteRenderer _potionImage;
 
     private void Start()
     {
@@ -13,7 +13,7 @@ public class KingKnossi : MonoBehaviour
 
     private void DisplayRecipe(NewRecipeEvent evt)
     {
-        _effectText.text = evt.Recipe.SymbolIngredient.Name;
+        _effectImage.sprite = evt.Recipe.SymbolIngredient.Symbol;
         _potionImage.color = evt.Recipe.ColorIngredient.Color;
     }
 }

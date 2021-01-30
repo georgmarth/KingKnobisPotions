@@ -26,6 +26,7 @@ public class ScoreSystem : Singleton<ScoreSystem>
     private void UpdateScore(int points)
     {
         Score += points;
+        Score = Mathf.Max(Score, 0);
         MessageBus.Instance.Publish(new ScoreUpdatedEvent{Score = Score, NewPoints = points});
     }
 }

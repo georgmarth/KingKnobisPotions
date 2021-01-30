@@ -22,23 +22,13 @@ public class Potion
             MessageBus.Instance.Publish(new PotionCorrectEvent{Potion = this});
     }
 
-    public bool IsCorrect
-    {
-        get
-        {
-            return _ingredients.Count == 2 &&
-                   _ingredients.Contains(Recipe.ColorIngredient) &&
-                   _ingredients.Contains(Recipe.SymbolIngredient);
-        }
-    }
+    public bool IsCorrect =>
+        _ingredients.Count == 2 &&
+        _ingredients.Contains(Recipe.ColorIngredient) &&
+        _ingredients.Contains(Recipe.SymbolIngredient);
 
-    public bool IsWrong
-    {
-        get
-        {
-            return _ingredients.Count > 2 || _ingredients.Any(ingredient =>
-                !ReferenceEquals(Recipe.ColorIngredient, ingredient) &&
-                !ReferenceEquals(Recipe.SymbolIngredient, ingredient));
-        }
-    }
+    public bool IsWrong =>
+        _ingredients.Count > 2 || _ingredients.Any(ingredient =>
+            !ReferenceEquals(Recipe.ColorIngredient, ingredient) &&
+            !ReferenceEquals(Recipe.SymbolIngredient, ingredient));
 }
