@@ -1,23 +1,22 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
 public class Potion
 {
     public Recipe Recipe { get; }
-    private List<IngredientType> _ingredients;
+    private readonly List<IIngredient> _ingredients;
 
     public Potion(Recipe recipe)
     {
         Recipe = recipe;
-        _ingredients = new List<IngredientType>();
+        _ingredients = new List<IIngredient>();
     }
 
-    public void AddIngredient(IngredientType ingredientType)
+    public void AddIngredient(IIngredient Ingredient)
     {
-        _ingredients.Add(ingredientType);
+        _ingredients.Add(Ingredient);
         if (IsWrong)
-            MessageBus.Instance.Publish(new WrongIngredientEvent{Potion = this, Ingredient = ingredientType});
+            MessageBus.Instance.Publish(new WrongIngredientEvent{Potion = this, Ingredient = Ingredient});
         else if (IsCorrect)
             MessageBus.Instance.Publish(new PotionCorrectEvent{Potion = this});
     }
@@ -26,9 +25,9 @@ public class Potion
     {
         get
         {
-            return Recipe.Ingredients.All(recipeIngredient =>
-                _ingredients.Count(ingredient => ingredient == recipeIngredient) ==
-                Recipe.Ingredients.Count(ingredient => ingredient == recipeIngredient));
+            return _ingredients.Count == 2 &&
+                   _ingredients.Contains(Recipe.ColorIngredient) &&
+                   _ingredients.Contains(Recipe.SymbolIngredient);
         }
     }
 
@@ -36,7 +35,9 @@ public class Potion
     {
         get
         {
-            return _ingredients.Any(ingredient => !Recipe.Ingredients.Contains(ingredient));
+            return _ingredients.Count > 2 || _ingredients.Any(ingredient =>
+                !ReferenceEquals(Recipe.ColorIngredient, ingredient) &&
+                !ReferenceEquals(Recipe.SymbolIngredient, ingredient));
         }
     }
 }

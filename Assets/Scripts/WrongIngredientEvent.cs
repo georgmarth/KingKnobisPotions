@@ -1,5 +1,5 @@
 ﻿public class WrongIngredientEvent
 {
     public Potion Potion;
-    public IngredientType Ingredient;
+    public IIngredient Ingredient;
 }

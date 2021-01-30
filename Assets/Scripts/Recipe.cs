@@ -1,9 +1,5 @@
-﻿using UnityEngine;
-
-[CreateAssetMenu(menuName = "Create Recipe", fileName = "Recipe", order = 0)]
-public class Recipe : ScriptableObject
+﻿public class Recipe
 {
-    public string RecipeName;
-    public Sprite Image;
-    public IngredientType[] Ingredients;
+    public ColorIngredient ColorIngredient;
+    public SymbolIngredient SymbolIngredient;
 }
