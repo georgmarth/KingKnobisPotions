@@ -4,7 +4,7 @@ using UnityEngine;
 public class Ingredient : MonoBehaviour
 {
     [SerializeField] private bool _shouldReset;
-    [SerializeField] private Renderer _spriteRenderer;
+    [SerializeField] public SpriteRenderer _spriteRenderer;
     public IngredientData IngredientData;
 
     private bool _dragging;

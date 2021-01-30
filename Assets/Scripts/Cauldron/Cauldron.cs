@@ -28,6 +28,7 @@ public class Cauldron : MonoBehaviour {
         for (int i= 0; i < _ingredientsUI.transform.childCount; i++) {         
             Image child = _ingredientsUI.transform.GetChild(i).gameObject.GetComponent<Image>();
             child.color = new Color(0,0,0,0.5f);
+            child.sprite = null;
             _ingredientsIn.Add(child);
         }
     }
@@ -36,6 +37,7 @@ public class Cauldron : MonoBehaviour {
     public void NewPotion(Recipe recipe) { //subscribe this to recipe created
         _potion = new Potion(recipe);
         _effects.FreshPotion();
+        ResetIngredientUI();
     }
 
 
@@ -43,19 +45,33 @@ public class Cauldron : MonoBehaviour {
     public void FlushPotion() { //subscribe to this flushevent -- automatic or by player button
 
         _effects.FreshPotion();
+        ResetIngredientUI();
+
     }
 
     public void IngredientAdded(Ingredient ingredient) { //subscribe to DropIngredient event with a delay corrutine.
 
         //check ifs
+        UpdateIngredientUI(ingredient);
         _effects.NewIngredient();
         _potion.AddIngredient(ingredient.IngredientData);
+        
+    }
 
-
+    public void UpdateIngredientUI(Ingredient ingredient) {
+        foreach (Image img in _ingredientsIn) {
+            if (img.sprite == null) {
+                img.sprite = ingredient._spriteRenderer.sprite;
+                return;
+            }
+        }
     }
 
     public void ResetIngredientUI() {
-        
+        foreach(Image img in _ingredientsIn) {
+            img.color = new Color(0, 0, 0, 0.5f);
+            img.sprite = null;
+        }
     }
 
 

@@ -75,7 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shouldReset: 1
   _spriteRenderer: {fileID: 8745339891849833176}
-  IngredientData: {fileID: 11400000, guid: 5ecd89df0c747d9409f6c24dad168928, type: 2}
+  IngredientData: {fileID: 11400000, guid: 9151fc4e6f20eb147983727b111171b8, type: 2}
 --- !u!50 &2751290855600376211
 Rigidbody2D:
   serializedVersion: 4
@@ -186,7 +186,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
