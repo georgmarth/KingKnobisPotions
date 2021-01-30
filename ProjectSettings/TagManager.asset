@@ -48,6 +48,12 @@ TagManager:
   - name: Cauldron
     uniqueID: 3365734907
     locked: 0
+  - name: Ingredient
+    uniqueID: 655189233
+    locked: 0
+  - name: Cauldron Bottom
+    uniqueID: 1786166401
+    locked: 0
   - name: King Knossi
     uniqueID: 2227899801
     locked: 0
@@ -56,7 +62,4 @@ TagManager:
     locked: 0
   - name: Potion
     uniqueID: 188916205
-    locked: 0
-  - name: Ingredient
-    uniqueID: 655189233
     locked: 0
