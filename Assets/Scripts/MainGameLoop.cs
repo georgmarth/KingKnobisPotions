@@ -12,7 +12,7 @@ public class MainGameLoop : Singleton<MainGameLoop>
     [SerializeField] private int _timeOutInSeconds = 5;
     [SerializeField] private IngredientList _ingredientList;
 
-    private GameState _gameState = GameState.TitleScreen;
+    private GameState _gameState;
 
     public int TimeOutInSeconds => _timeOutInSeconds;
 
@@ -21,14 +21,22 @@ public class MainGameLoop : Singleton<MainGameLoop>
     public void StartGame()
     {
         Timer.Instance.StartTimer();
-        CurrentRecipe = GetRandomRecipe();
-        MessageBus.Instance.Publish(new NewRecipeEvent{Recipe = CurrentRecipe});
+        CreateNewRecipe();
+        SetGameState(GameState.Running);
     }
-    
+
+    private void CreateNewRecipe()
+    {
+        CurrentRecipe = GetRandomRecipe();
+        MessageBus.Instance.Publish(new NewRecipeEvent {Recipe = CurrentRecipe});
+    }
+
     private void Start()
     {
         MessageBus.Instance.Subscribe<TimeElapsedEvent>(OnTimeElapsed);
-        _gameState = GameState.Running;
+        MessageBus.Instance.Subscribe<PotionCorrectEvent>(OnPotionCorrect);
+        MessageBus.Instance.Subscribe<WrongIngredientEvent>(OnWrongIngredient);
+        SetGameState(GameState.TitleScreen);
     }
 
     private void OnTimeElapsed(TimeElapsedEvent evt)
@@ -39,11 +47,27 @@ public class MainGameLoop : Singleton<MainGameLoop>
         }
     }
 
+    private void OnPotionCorrect(PotionCorrectEvent evt)
+    {
+        CreateNewRecipe();
+    }
+
+    private void OnWrongIngredient(WrongIngredientEvent evt)
+    {
+        CreateNewRecipe();
+    }
+
     private void GameOver()
     {
         Debug.Log("Game Over!");
         Timer.Instance.StopTimer();
-        _gameState = GameState.GameOver;
+        SetGameState(GameState.GameOver);
+    }
+
+    private void SetGameState(GameState gameState)
+    {
+        _gameState = gameState;
+        MessageBus.Instance.Publish(_gameState);
     }
 
     private Recipe GetRandomRecipe()
