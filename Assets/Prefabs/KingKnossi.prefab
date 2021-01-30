@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.43137255}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -111,7 +111,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 9.7, y: 0}
-  m_SizeDelta: {x: 25.207186, y: 16.880651}
+  m_SizeDelta: {x: 16.06684, y: 16.880651}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6480145002518910447
 CanvasRenderer:
@@ -147,7 +147,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 5
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -188,8 +188,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.24, y: 0}
-  m_SizeDelta: {x: 4, y: 4}
+  m_AnchoredPosition: {x: -9.0634, y: 0.0000023842}
+  m_SizeDelta: {x: 18.126894, y: 16.880648}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5252735266456777233
 CanvasRenderer:
@@ -308,7 +308,7 @@ MonoBehaviour:
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 5
+  m_DynamicPixelsPerUnit: 20
 --- !u!1 &8236178135544535370
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +318,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8236178135544535371}
+  - component: {fileID: 2970703336747157239}
   m_Layer: 0
   m_Name: KingKnossi
   m_TagString: Untagged
@@ -341,6 +342,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2970703336747157239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236178135544535370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce478632e1d641dba0acc5759b381b86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _effectText: {fileID: 8491565233180546763}
+  _potionImage: {fileID: 3172993786958378815}
 --- !u!1001 &8236178137451534861
 PrefabInstance:
   m_ObjectHideFlags: 0
