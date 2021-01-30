@@ -9,5 +9,5 @@ public class ColorIngredient : IngredientData
     public IngredientType IngredientType => IngredientType.Color;
 
     public string Name => _name;
-    public Color Color => Color;
+    public Color Color => _color;
 }

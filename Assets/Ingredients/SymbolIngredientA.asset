@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SymbolIngredientA
   m_EditorClassIdentifier: 
   _symbol: {fileID: 0}
-  _name: 
+  _name: Cross
