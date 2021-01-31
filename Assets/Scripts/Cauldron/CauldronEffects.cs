@@ -62,7 +62,7 @@ public class CauldronEffects : MonoBehaviour
 
     private void StopAllParticles() {
         foreach (EffectMapping em in _effectMappings) {
-            if(em.ParticleEffect) em.ParticleEffect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            if(em.ParticleEffect) em.ParticleEffect.Stop();
         }
     }
 }
