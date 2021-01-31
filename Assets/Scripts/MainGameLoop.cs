@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public enum GameState
@@ -24,6 +25,14 @@ public class MainGameLoop : Singleton<MainGameLoop>
         Timer.Instance.StartTimer();
         CreateNewRecipe();
         SetGameState(GameState.Running);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     private void CreateNewRecipe()
