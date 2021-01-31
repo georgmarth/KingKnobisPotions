@@ -36,24 +36,17 @@ public class Cauldron : MonoBehaviour {
 
     public void NewPotion(Recipe recipe) { //subscribe this to recipe created
         _potion = new Potion(recipe);
-        _effects.FreshPotion();
         ResetIngredientUI();
     }
 
 
 
     public void FlushPotion() { //subscribe to this flushevent -- automatic or by player button
-
         ResetIngredientUI();
-
     }
 
     public void IngredientAdded(Ingredient ingredient) { //subscribe to DropIngredient event with a delay corrutine.
-
-        //check ifs
-        UpdateIngredientUI(ingredient);
-        _potion.AddIngredient(ingredient.IngredientData);
-        
+        UpdateIngredientUI(ingredient);  
     }
 
     public void UpdateIngredientUI(Ingredient ingredient) {
