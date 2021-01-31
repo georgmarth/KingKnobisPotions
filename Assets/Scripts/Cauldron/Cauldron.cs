@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Cauldron : MonoBehaviour {
 
     private Potion _potion;
-    private CauldronEffects _effects;
+    [SerializeField] private CauldronEffects _effects;
     [SerializeField] SpriteRenderer _renderer;
 
     [SerializeField] GameObject _ingredientsUI;
@@ -19,7 +19,6 @@ public class Cauldron : MonoBehaviour {
         MessageBus.Instance.Subscribe<DropIngredientEvent>(evt => IngredientAdded(evt.Ingredient));
         MessageBus.Instance.Subscribe<WrongIngredientEvent>(evt => FlushPotion());
 
-        _effects = new CauldronEffects(_renderer);
 
         _ingredientsIn = new List<Image>();
 
@@ -45,7 +44,6 @@ public class Cauldron : MonoBehaviour {
 
     public void FlushPotion() { //subscribe to this flushevent -- automatic or by player button
 
-        _effects.FreshPotion();
         ResetIngredientUI();
 
     }
@@ -54,7 +52,6 @@ public class Cauldron : MonoBehaviour {
 
         //check ifs
         UpdateIngredientUI(ingredient);
-        _effects.NewIngredient();
         _potion.AddIngredient(ingredient.IngredientData);
         
     }
