@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 14.7, y: 0}
   m_SizeDelta: {x: 158.1, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6839144282381457615
@@ -726,7 +726,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: King Knossis Potions
+  m_text: King Knobis Potions
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2df108b02bb0e454293f41ea9c221ea8, type: 2}
   m_sharedMaterial: {fileID: 4825807321869171673, guid: 2df108b02bb0e454293f41ea9c221ea8,
@@ -1861,7 +1861,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
