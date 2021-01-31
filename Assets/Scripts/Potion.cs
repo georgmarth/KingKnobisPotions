@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
 public class Potion
 {
@@ -20,6 +19,9 @@ public class Potion
             MessageBus.Instance.Publish(new WrongIngredientEvent{Potion = this, IngredientData = ingredientData});
         else if (IsCorrect)
             MessageBus.Instance.Publish(new PotionCorrectEvent{Potion = this});
+        else
+            MessageBus.Instance.Publish(new CorrectIngredientEvent{Potion = this, IngredientData = ingredientData});
+            
     }
 
     public bool IsCorrect =>

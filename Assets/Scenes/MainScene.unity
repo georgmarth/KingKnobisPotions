@@ -348,12 +348,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 24.416, y: -25.842001, z: -40.954002}
---- !u!212 &733047406 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 3496938384808247847, guid: 099ef91a9df776848b1b98a4c2ab366d,
-    type: 3}
-  m_PrefabInstance: {fileID: 8236178136178118282}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &874216434 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9194327292798690342, guid: 9499525987fbe6e41a65237e032ed83b,
@@ -1346,12 +1340,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4546095856318548411, guid: 71f9a9f62e1915b4dad5b9006d2ef819,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 6339891597022528635, guid: a0e0df17524232c42bd55a71db1dcfa4,
-        type: 2}
     - target: {fileID: 5764807043290000049, guid: 71f9a9f62e1915b4dad5b9006d2ef819,
         type: 3}
       propertyPath: m_RootOrder
@@ -1571,45 +1559,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2970703336747157239, guid: 099ef91a9df776848b1b98a4c2ab366d,
-        type: 3}
-      propertyPath: _potionImage
-      value: 
-      objectReference: {fileID: 733047406}
-    - target: {fileID: 6299164990548466486, guid: 099ef91a9df776848b1b98a4c2ab366d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8236178135544535370, guid: 099ef91a9df776848b1b98a4c2ab366d,
         type: 3}
       propertyPath: m_Name
       value: KingKnossi
       objectReference: {fileID: 0}
-    - target: {fileID: 8236178135544535370, guid: 099ef91a9df776848b1b98a4c2ab366d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8236178135544535371, guid: 099ef91a9df776848b1b98a4c2ab366d,
         type: 3}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8236178135544535371, guid: 099ef91a9df776848b1b98a4c2ab366d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.72586
-      objectReference: {fileID: 0}
-    - target: {fileID: 8236178135544535371, guid: 099ef91a9df776848b1b98a4c2ab366d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.72586
-      objectReference: {fileID: 0}
-    - target: {fileID: 8236178135544535371, guid: 099ef91a9df776848b1b98a4c2ab366d,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.72586
       objectReference: {fileID: 0}
     - target: {fileID: 8236178135544535371, guid: 099ef91a9df776848b1b98a4c2ab366d,
         type: 3}
