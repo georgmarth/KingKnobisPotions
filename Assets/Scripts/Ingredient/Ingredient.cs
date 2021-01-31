@@ -14,6 +14,7 @@ public class Ingredient : MonoBehaviour
     private bool _onCauldron;
     private Camera _camera;
     private Vector3 _initialPosition;
+    private bool _canInteract;
 
     private IngredientsAnimator _animator;
     
@@ -23,6 +24,8 @@ public class Ingredient : MonoBehaviour
         _camera = Camera.main;
         _initialPosition = transform.position;
         _animator = new IngredientsAnimator { _animator = GetComponent<Animator>() };
+        MessageBus.Instance.Subscribe<NewRecipeEvent>(_ => _canInteract = true);
+        MessageBus.Instance.Subscribe<WrongIngredientEvent>(_ => _canInteract = false);
     }
 
     private void Update()
@@ -43,8 +46,8 @@ public class Ingredient : MonoBehaviour
 
     private void OnMouseDown()
     {
-        _dragging = true;
-        MessageBus.Instance.Publish(Input.mousePosition);
+        if (_canInteract)
+            _dragging = true;
     }
 
     private void OnMouseUp()
