@@ -60,9 +60,10 @@ public class CauldronEffects : MonoBehaviour
     }
 }
 
+
+
 [System.Serializable]
-public class EffectMapping
-{
+public class EffectMapping {
     public IngredientData IngredientData;
     public AudioClip SoundEffect;
     public ParticleSystem ParticleEffect;
