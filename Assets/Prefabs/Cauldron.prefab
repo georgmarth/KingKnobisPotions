@@ -14852,49 +14852,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff398de4d7fb0be4aba509c685de3cf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 4546095856318548411}
+  _audioSource: {fileID: 4546095856318548411}
   _renderer: {fileID: 6494895188425792270}
   _effectMappings:
   - IngredientData: {fileID: 11400000, guid: eb1f31e117c022e40b919ea2a67c4091, type: 2}
     SoundEffect: {fileID: 8300000, guid: 5766e3716e4647c48af207cd9232a208, type: 3}
     ParticleEffect: {fileID: 5295031556761135215}
-    Color: {r: 0, g: 0, b: 0, a: 0}
+    Color: {r: 0, g: 0, b: 0, a: 1}
   - IngredientData: {fileID: 11400000, guid: 6d630ed72ecece14db719263059ee628, type: 2}
     SoundEffect: {fileID: 8300000, guid: 67bb74dbd3f76c648aea8188d112bf72, type: 3}
     ParticleEffect: {fileID: 1257913077243125186}
-    Color: {r: 0, g: 0, b: 0, a: 0}
+    Color: {r: 0, g: 0, b: 0, a: 1}
   - IngredientData: {fileID: 11400000, guid: 1d2f947d1df219d46a56936cf6fc99f4, type: 2}
     SoundEffect: {fileID: 8300000, guid: b6af39f9ef39a354993ec3a83bcf431b, type: 3}
     ParticleEffect: {fileID: 9162232603146319722}
-    Color: {r: 0, g: 0, b: 0, a: 0}
+    Color: {r: 0, g: 0, b: 0, a: 1}
   - IngredientData: {fileID: 11400000, guid: 19b4523a0c4f8a34c98187f7e721bf8a, type: 2}
     SoundEffect: {fileID: 8300000, guid: 3cce642cae8e78845a7975abc17e5269, type: 3}
     ParticleEffect: {fileID: 7196230271610166135}
-    Color: {r: 0, g: 0, b: 0, a: 0}
+    Color: {r: 0, g: 0, b: 0, a: 1}
   - IngredientData: {fileID: 11400000, guid: 9151fc4e6f20eb147983727b111171b8, type: 2}
     SoundEffect: {fileID: 8300000, guid: a59fbd90b23b0164ea049d62bd167816, type: 3}
     ParticleEffect: {fileID: 1841873269758487836}
-    Color: {r: 0, g: 0, b: 0, a: 0}
+    Color: {r: 0, g: 0, b: 0, a: 1}
   - IngredientData: {fileID: 11400000, guid: b1ed63c5a1005e84b9d77a00f39aa5aa, type: 2}
     SoundEffect: {fileID: 0}
     ParticleEffect: {fileID: 0}
-    Color: {r: 1, g: 0.043137256, b: 0.043137256, a: 0}
+    Color: {r: 1, g: 0.043137256, b: 0.043137256, a: 1}
   - IngredientData: {fileID: 11400000, guid: f181c5ed3f8a56044b73ec5ec0950d46, type: 2}
     SoundEffect: {fileID: 0}
     ParticleEffect: {fileID: 0}
-    Color: {r: 0.14117648, g: 0.90588236, b: 0.105882354, a: 0}
+    Color: {r: 0.14117648, g: 0.90588236, b: 0.105882354, a: 1}
   - IngredientData: {fileID: 11400000, guid: 26f0d94c26fdfe444ad4b4b6fe20a073, type: 2}
     SoundEffect: {fileID: 0}
     ParticleEffect: {fileID: 0}
-    Color: {r: 0.09019608, g: 0.21176471, b: 0.89411765, a: 0}
+    Color: {r: 0.09019608, g: 0.21176471, b: 0.89411765, a: 1}
   - IngredientData: {fileID: 11400000, guid: 5ecd89df0c747d9409f6c24dad168928, type: 2}
     SoundEffect: {fileID: 0}
     ParticleEffect: {fileID: 0}
-    Color: {r: 0.9647059, g: 0.9098039, b: 0.05490196, a: 0}
+    Color: {r: 0.9647059, g: 0.9098039, b: 0.05490196, a: 1}
   - IngredientData: {fileID: 11400000, guid: f897e347b0fde0d4881fbf025d47060f, type: 2}
     SoundEffect: {fileID: 0}
     ParticleEffect: {fileID: 0}
-    Color: {r: 0.78039217, g: 0.11372549, b: 1, a: 0}
+    Color: {r: 0.78039217, g: 0.11372549, b: 1, a: 1}
   _successEffect:
     IngredientData: {fileID: 0}
     SoundEffect: {fileID: 0}
@@ -14909,7 +14909,7 @@ MonoBehaviour:
     IngredientData: {fileID: 0}
     SoundEffect: {fileID: 8300000, guid: 295beeeaf01204c43be7ead8714784a0, type: 3}
     ParticleEffect: {fileID: 8016644101857115427}
-    Color: {r: 0.5778747, g: 0.79844934, b: 0.8113208, a: 0}
+    Color: {r: 0.5778747, g: 0.79844934, b: 0.8113208, a: 1}
   _bubbleMaterial: {fileID: 2100000, guid: ba871b1394facf64199cf0c67e3ee51b, type: 2}
 --- !u!1 &5812154341035988412
 GameObject:
@@ -15241,7 +15241,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 0.7
       minScalar: 5
       maxCurve:
         serializedVersion: 2

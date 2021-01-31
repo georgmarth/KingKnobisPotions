@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 
 public class CauldronEffects : MonoBehaviour
 {
-    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioSource _audioSource;
     [SerializeField] private SpriteRenderer _renderer;
     [SerializeField] private EffectMapping[] _effectMappings;
     [SerializeField] private EffectMapping _successEffect;
@@ -24,11 +24,12 @@ public class CauldronEffects : MonoBehaviour
 
     public void FreshPotion() 
     {
-        //stop VfX
+
         StopAllParticles();
         _renderer.color = _idleEffect.Color;
         _bubbleMaterial.color = _idleEffect.Color;
-        _idleEffect.ParticleEffect.Play();
+        _audioSource.clip = _idleEffect.SoundEffect;
+        _audioSource.Play();
         
     }
 
@@ -39,13 +40,11 @@ public class CauldronEffects : MonoBehaviour
         if (correctMapping != null)
         {
             if (correctMapping.Color != Color.black) {
-                Debug.Log("workes");
-                _renderer.material.color = correctMapping.Color;
+                _renderer.color = correctMapping.Color;
                 _bubbleMaterial.color = correctMapping.Color;
             }
             if (correctMapping.SoundEffect != null) {
-                audioSource.clip = correctMapping.SoundEffect;
-                audioSource.Play();
+                _audioSource.PlayOneShot(correctMapping.SoundEffect);
             }
             if (correctMapping.ParticleEffect != null) {
                 correctMapping.ParticleEffect.Play();
@@ -65,7 +64,6 @@ public class CauldronEffects : MonoBehaviour
         foreach (EffectMapping em in _effectMappings) {
             if(em.ParticleEffect) em.ParticleEffect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         }
-        _idleEffect.ParticleEffect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
     }
 }
 

@@ -43,14 +43,12 @@ public class Ingredient : MonoBehaviour
 
     private void OnMouseDown()
     {
-        _spriteRenderer.material.color = Color.yellow;
         _dragging = true;
         MessageBus.Instance.Publish(Input.mousePosition);
     }
 
     private void OnMouseUp()
     {
-        _spriteRenderer.material.color = Color.red;
         _dragging = false;
 
         if (_onCauldron)
@@ -78,7 +76,6 @@ public class Ingredient : MonoBehaviour
         if (!other.gameObject.CompareTag("Cauldron"))
             return;
 
-        _spriteRenderer.material.color = Color.magenta;
         _onCauldron = true;
     }
 
@@ -87,7 +84,6 @@ public class Ingredient : MonoBehaviour
         if (!other.gameObject.CompareTag("Cauldron"))
             return;
 
-        _spriteRenderer.material.color = Color.yellow;
         _onCauldron = false;
     }
 
