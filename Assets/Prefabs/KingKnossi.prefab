@@ -464,9 +464,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 6.55, y: 4.42}
+  m_AnchoredPosition: {x: 2.4824204, y: 3.8147304}
   m_SizeDelta: {x: 40.675774, y: 26.792334}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: -0.000000029802322, y: 0.38704443}
 --- !u!223 &3616054887459996702
 Canvas:
   m_ObjectHideFlags: 0
@@ -522,6 +522,7 @@ GameObject:
   - component: {fileID: 2970703336747157239}
   - component: {fileID: 1271792519366896598}
   - component: {fileID: 7628006463174942364}
+  - component: {fileID: 3429897443407026184}
   m_Layer: 0
   m_Name: KingKnossi
   m_TagString: Untagged
@@ -559,6 +560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _effectImage: {fileID: 3539298281103507231}
   _potionImage: {fileID: 3496938384808247847}
+  _animator: {fileID: 3429897443407026184}
 --- !u!82 &1271792519366896598
 AudioSource:
   m_ObjectHideFlags: 0
@@ -678,6 +680,25 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3e57739004388884da35ba8acdd3d015, type: 3}
   - {fileID: 8300000, guid: ee5c0ce6d97869448a1cf3c72519a455, type: 3}
   _audioSource: {fileID: 1271792519366896598}
+--- !u!95 &3429897443407026184
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236178135544535370}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1586edc6972d82543979633bf7aead86, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &8236178137451534861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -808,7 +829,7 @@ PrefabInstance:
     - target: {fileID: 6303206514018567150, guid: c5d32344194cffe49aacb378e84b9da2,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: -0.0013698936
+      value: -0.0013689399
       objectReference: {fileID: 0}
     - target: {fileID: 6303206514018567150, guid: c5d32344194cffe49aacb378e84b9da2,
         type: 3}
@@ -833,12 +854,12 @@ PrefabInstance:
     - target: {fileID: 6324051854461809743, guid: c5d32344194cffe49aacb378e84b9da2,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.0023719668
+      value: 0.0023681521
       objectReference: {fileID: 0}
     - target: {fileID: 6324051854461809743, guid: c5d32344194cffe49aacb378e84b9da2,
         type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 0.00000023841858
+      value: 0.00000011920929
       objectReference: {fileID: 0}
     - target: {fileID: 6324051854461809743, guid: c5d32344194cffe49aacb378e84b9da2,
         type: 3}
@@ -863,7 +884,7 @@ PrefabInstance:
     - target: {fileID: 7849798761617874091, guid: c5d32344194cffe49aacb378e84b9da2,
         type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 0.00038003922
+      value: 0.0003798008
       objectReference: {fileID: 0}
     - target: {fileID: 7849798761617874091, guid: c5d32344194cffe49aacb378e84b9da2,
         type: 3}
@@ -878,7 +899,7 @@ PrefabInstance:
     - target: {fileID: 7849798761617874091, guid: c5d32344194cffe49aacb378e84b9da2,
         type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 2.0662203
+      value: 2.06622
       objectReference: {fileID: 0}
     - target: {fileID: 7912856506459265717, guid: c5d32344194cffe49aacb378e84b9da2,
         type: 3}
@@ -888,7 +909,7 @@ PrefabInstance:
     - target: {fileID: 7912856506459265717, guid: c5d32344194cffe49aacb378e84b9da2,
         type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: -0.00000035762787
+      value: -0.00000047683716
       objectReference: {fileID: 0}
     - target: {fileID: 7912856506459265717, guid: c5d32344194cffe49aacb378e84b9da2,
         type: 3}
