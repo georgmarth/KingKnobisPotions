@@ -5,6 +5,7 @@ public class Ingredient : MonoBehaviour
 {
     [SerializeField] private bool _shouldReset;
     [SerializeField] public SpriteRenderer _spriteRenderer;
+    [SerializeField] private Collider2D _collider;
     public IngredientData IngredientData;
 
     private bool _dragging;
@@ -66,8 +67,9 @@ public class Ingredient : MonoBehaviour
     private void PutInCauldron(Ingredient ingredient) {
         if (this == ingredient)     
         { 
-        _animator.PlayDropingInCauldron();
-        StartCoroutine("DestroyIngredient");
+            _animator.PlayDropingInCauldron();
+            StartCoroutine("DestroyIngredient");
+            _collider.enabled = false;
         }
     }
 
