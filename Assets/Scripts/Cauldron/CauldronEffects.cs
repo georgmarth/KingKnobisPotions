@@ -38,12 +38,14 @@ public class CauldronEffects : MonoBehaviour
         var correctMapping = _effectMappings.FirstOrDefault(mapping => mapping.IngredientData == ingredient.IngredientData);
         if (correctMapping != null)
         {
-            if (correctMapping.Color != null) {
+            if (correctMapping.Color != Color.black) {
+                Debug.Log("workes");
                 _renderer.material.color = correctMapping.Color;
                 _bubbleMaterial.color = correctMapping.Color;
             }
             if (correctMapping.SoundEffect != null) {
-                
+                audioSource.clip = correctMapping.SoundEffect;
+                audioSource.Play();
             }
             if (correctMapping.ParticleEffect != null) {
                 correctMapping.ParticleEffect.Play();
@@ -63,6 +65,7 @@ public class CauldronEffects : MonoBehaviour
         foreach (EffectMapping em in _effectMappings) {
             if(em.ParticleEffect) em.ParticleEffect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         }
+        _idleEffect.ParticleEffect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
     }
 }
 
