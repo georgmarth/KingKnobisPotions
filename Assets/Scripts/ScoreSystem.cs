@@ -8,9 +8,15 @@ public class ScoreSystem : Singleton<ScoreSystem>
 
     private void Start()
     {
-        Score = 0;
         MessageBus.Instance.Subscribe<PotionCorrectEvent>(OnPotionCorrect);
         MessageBus.Instance.Subscribe<WrongIngredientEvent>(OnPotionInCorrect);
+        MessageBus.Instance.Subscribe<GameState>(OnGameStateChanged);
+    }
+
+    private void OnGameStateChanged(GameState gameState)
+    {
+        if (gameState == GameState.Running)
+            UpdateScore(0);
     }
 
     private void OnPotionInCorrect(WrongIngredientEvent obj)
