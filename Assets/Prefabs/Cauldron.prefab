@@ -46,8 +46,8 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
-  prewarm: 1
+  looping: 0
+  prewarm: 0
   playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -115,8 +115,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 20
-      minScalar: 20
+      scalar: 4
+      minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -865,7 +865,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 3
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -5008,8 +5008,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10
-      minScalar: 3
+      scalar: 2
+      minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -5758,7 +5758,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 30
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -9647,6 +9647,134 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!1 &2709861375346535411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 790231744867851859}
+  - component: {fileID: 9150003783269799847}
+  m_Layer: 0
+  m_Name: SuccessAndFailure
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &790231744867851859
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2709861375346535411}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5764807043290000049}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &9150003783269799847
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2709861375346535411}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 6339891597022528635, guid: a0e0df17524232c42bd55a71db1dcfa4,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &4012736309933977138
 GameObject:
   m_ObjectHideFlags: 0
@@ -14758,6 +14886,7 @@ Transform:
   - {fileID: 621737014036457492}
   - {fileID: 7132567352928695630}
   - {fileID: 1320938709885192274}
+  - {fileID: 790231744867851859}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14982,6 +15111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 4546095856318548411}
+  _audioSourceWinAndLoss: {fileID: 9150003783269799847}
   _renderer: {fileID: 6494895188425792270}
   _effectMappings:
   - IngredientData: {fileID: 11400000, guid: eb1f31e117c022e40b919ea2a67c4091, type: 2}
@@ -15007,39 +15137,31 @@ MonoBehaviour:
   - IngredientData: {fileID: 11400000, guid: b1ed63c5a1005e84b9d77a00f39aa5aa, type: 2}
     SoundEffect: {fileID: 0}
     ParticleEffect: {fileID: 0}
-    Color: {r: 1, g: 0.043137256, b: 0.043137256, a: 1}
+    Color: {r: 1, g: 0, b: 0, a: 1}
   - IngredientData: {fileID: 11400000, guid: f181c5ed3f8a56044b73ec5ec0950d46, type: 2}
     SoundEffect: {fileID: 0}
     ParticleEffect: {fileID: 0}
-    Color: {r: 0.14117648, g: 0.90588236, b: 0.105882354, a: 1}
+    Color: {r: 0, g: 1, b: 0.09019608, a: 1}
   - IngredientData: {fileID: 11400000, guid: 26f0d94c26fdfe444ad4b4b6fe20a073, type: 2}
     SoundEffect: {fileID: 0}
     ParticleEffect: {fileID: 0}
-    Color: {r: 0.09019608, g: 0.21176471, b: 0.89411765, a: 1}
+    Color: {r: 0, g: 0.69803923, b: 1, a: 1}
   - IngredientData: {fileID: 11400000, guid: 5ecd89df0c747d9409f6c24dad168928, type: 2}
     SoundEffect: {fileID: 0}
     ParticleEffect: {fileID: 0}
-    Color: {r: 0.9647059, g: 0.9098039, b: 0.05490196, a: 1}
+    Color: {r: 0.972549, g: 0.90588236, b: 0.050980393, a: 1}
   - IngredientData: {fileID: 11400000, guid: f897e347b0fde0d4881fbf025d47060f, type: 2}
     SoundEffect: {fileID: 0}
     ParticleEffect: {fileID: 0}
-    Color: {r: 0.78039217, g: 0.11372549, b: 1, a: 1}
-  _successEffect:
-    IngredientData: {fileID: 0}
-    SoundEffect: {fileID: 0}
-    ParticleEffect: {fileID: 0}
-    Color: {r: 0, g: 0, b: 0, a: 1}
-  _failureEffect:
-    IngredientData: {fileID: 0}
-    SoundEffect: {fileID: 0}
-    ParticleEffect: {fileID: 0}
-    Color: {r: 0, g: 0, b: 0, a: 1}
+    Color: {r: 0.76862746, g: 0.09803922, b: 0.9137255, a: 1}
   _idleEffect:
     IngredientData: {fileID: 0}
     SoundEffect: {fileID: 0}
     ParticleEffect: {fileID: 8016644101857115427}
     Color: {r: 0.5778747, g: 0.79844934, b: 0.8113208, a: 1}
   _bubbleMaterial: {fileID: 2100000, guid: ba871b1394facf64199cf0c67e3ee51b, type: 2}
+  _successSound: {fileID: 8300000, guid: e11c1d3197a8c7642b7f40f82ef28aac, type: 3}
+  _failureSound: {fileID: 8300000, guid: 552a4f49771ae0b4ea7d3b3b81c62443, type: 3}
 --- !u!1 &5812154341035988412
 GameObject:
   m_ObjectHideFlags: 0
@@ -15424,7 +15546,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.33333334}
+      maxColor: {r: 1, g: 1, b: 1, a: 0}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -19946,11 +20068,11 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
+  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
-  m_VertexStreams: 00010304
+  m_VertexStreams: 000304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -20071,8 +20193,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10
-      minScalar: 8
+      scalar: 4
+      minScalar: 2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -20124,7 +20246,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.3
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -20821,7 +20943,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 4
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -29637,7 +29759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &621737014036457492
 RectTransform:
   m_ObjectHideFlags: 0

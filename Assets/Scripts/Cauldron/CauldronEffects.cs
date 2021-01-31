@@ -6,13 +6,15 @@ using Random = UnityEngine.Random;
 public class CauldronEffects : MonoBehaviour
 {
     [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioSource _audioSourceWinAndLoss;
     [SerializeField] private SpriteRenderer _renderer;
     [SerializeField] private EffectMapping[] _effectMappings;
-    [SerializeField] private EffectMapping _successEffect;
-    [SerializeField] private EffectMapping _failureEffect;
     [SerializeField] private EffectMapping _idleEffect;
 
     [SerializeField] private Material _bubbleMaterial;
+
+    [SerializeField] private AudioClip _successSound;
+    [SerializeField] private AudioClip _failureSound;
 
     private void Start()
     {
@@ -28,8 +30,7 @@ public class CauldronEffects : MonoBehaviour
         StopAllParticles();
         _renderer.color = _idleEffect.Color;
         _bubbleMaterial.color = _idleEffect.Color;
-        _audioSource.clip = _idleEffect.SoundEffect;
-        _audioSource.Play();
+        _idleEffect.ParticleEffect.Play();
         
     }
 
@@ -44,7 +45,8 @@ public class CauldronEffects : MonoBehaviour
                 _bubbleMaterial.color = correctMapping.Color;
             }
             if (correctMapping.SoundEffect != null) {
-                _audioSource.PlayOneShot(correctMapping.SoundEffect);
+                _audioSource.clip = correctMapping.SoundEffect;
+                _audioSource.PlayDelayed(0.7f);
             }
             if (correctMapping.ParticleEffect != null) {
                 correctMapping.ParticleEffect.Play();
@@ -53,11 +55,13 @@ public class CauldronEffects : MonoBehaviour
     }
 
     public void PotionCorrect(Potion potion) {
-        
+        _audioSourceWinAndLoss.clip = _successSound;
+        _audioSourceWinAndLoss.PlayDelayed(0.9f);
     }
 
     public void WrongIngredient() {
-        
+        _audioSourceWinAndLoss.clip = _failureSound;
+        _audioSourceWinAndLoss.PlayDelayed(0.9f);
     }
 
     private void StopAllParticles() {
@@ -65,6 +69,7 @@ public class CauldronEffects : MonoBehaviour
             if(em.ParticleEffect) em.ParticleEffect.Stop();
         }
     }
+
 }
 
 
@@ -76,3 +81,6 @@ public class EffectMapping {
     public ParticleSystem ParticleEffect;
     public Color Color;
 }
+
+
+
