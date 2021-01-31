@@ -738,7 +738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aae5fcef4b984cafa46fc66951b24473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeOutInSeconds: 100
+  _timeOutInSeconds: 90
   _ingredientList: {fileID: 11400000, guid: c752d60046ed5084ea35ff248d29cace, type: 2}
 --- !u!4 &1683465087
 Transform:
