@@ -14899,12 +14899,12 @@ MonoBehaviour:
     IngredientData: {fileID: 0}
     SoundEffect: {fileID: 0}
     ParticleEffect: {fileID: 0}
-    Color: {r: 0, g: 0, b: 0, a: 0}
+    Color: {r: 0, g: 0, b: 0, a: 1}
   _failureEffect:
     IngredientData: {fileID: 0}
     SoundEffect: {fileID: 0}
     ParticleEffect: {fileID: 0}
-    Color: {r: 0, g: 0, b: 0, a: 0}
+    Color: {r: 0, g: 0, b: 0, a: 1}
   _idleEffect:
     IngredientData: {fileID: 0}
     SoundEffect: {fileID: 8300000, guid: 295beeeaf01204c43be7ead8714784a0, type: 3}
