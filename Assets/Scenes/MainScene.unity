@@ -422,6 +422,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 24.416, y: -25.842001, z: -40.954002}
+--- !u!212 &733047406 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3496938384808247847, guid: 099ef91a9df776848b1b98a4c2ab366d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8236178136178118282}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,6 +940,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2970703336747157239, guid: 099ef91a9df776848b1b98a4c2ab366d,
+        type: 3}
+      propertyPath: _potionImage
+      value: 
+      objectReference: {fileID: 733047406}
+    - target: {fileID: 6299164990548466486, guid: 099ef91a9df776848b1b98a4c2ab366d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8236178135544535370, guid: 099ef91a9df776848b1b98a4c2ab366d,
         type: 3}
       propertyPath: m_Name
