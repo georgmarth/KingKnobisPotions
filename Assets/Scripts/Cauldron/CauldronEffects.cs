@@ -31,7 +31,9 @@ public class CauldronEffects : MonoBehaviour
         _renderer.color = _idleEffect.Color;
         _bubbleMaterial.color = _idleEffect.Color;
         _idleEffect.ParticleEffect.Play();
-        
+        _audioSource.clip = _idleEffect.SoundEffect;
+        _audioSource.Play();
+
     }
 
 

@@ -15156,7 +15156,7 @@ MonoBehaviour:
     Color: {r: 0.76862746, g: 0.09803922, b: 0.9137255, a: 1}
   _idleEffect:
     IngredientData: {fileID: 0}
-    SoundEffect: {fileID: 0}
+    SoundEffect: {fileID: 8300000, guid: ca0cb65b19fb1c447b7695ab74a5500c, type: 3}
     ParticleEffect: {fileID: 8016644101857115427}
     Color: {r: 0.5778747, g: 0.79844934, b: 0.8113208, a: 1}
   _bubbleMaterial: {fileID: 2100000, guid: ba871b1394facf64199cf0c67e3ee51b, type: 2}
