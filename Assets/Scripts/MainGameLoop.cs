@@ -48,7 +48,7 @@ public class MainGameLoop : Singleton<MainGameLoop>
 
     private void OnTimeElapsed(TimeElapsedEvent evt)
     {
-        if (evt.ElapsedTime.Seconds >= _timeOutInSeconds)
+        if (evt.ElapsedTime.TotalSeconds >= _timeOutInSeconds)
         {
             GameOver();
         }

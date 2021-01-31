@@ -26,6 +26,7 @@ public class Ingredient : MonoBehaviour
         _animator = new IngredientsAnimator { _animator = GetComponent<Animator>() };
         MessageBus.Instance.Subscribe<NewRecipeEvent>(_ => _canInteract = true);
         MessageBus.Instance.Subscribe<WrongIngredientEvent>(_ => _canInteract = false);
+        MessageBus.Instance.Subscribe<PotionCorrectEvent>(_ => _canInteract = false);
     }
 
     private void Update()
