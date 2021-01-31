@@ -22,7 +22,7 @@ public class KingSpeech : MonoBehaviour
         }
         else
         {
-            _mixer.SetFloat("musicVol", -10f);
+            _mixer.SetFloat("musicVol", -15f);
             _kingSpeech.Stop();
         }
     }
