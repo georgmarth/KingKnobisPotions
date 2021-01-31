@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ScoreSettings
   m_EditorClassIdentifier: 
   _successPoints: 1000
-  _failPoints: -50
+  _failPoints: -100
