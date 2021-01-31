@@ -6,12 +6,15 @@ public class Ingredient : MonoBehaviour
     [SerializeField] private bool _shouldReset;
     [SerializeField] public SpriteRenderer _spriteRenderer;
     [SerializeField] private Collider2D _collider;
+    [SerializeField] private AudioSource _splashAudio;
+    [SerializeField] private AudioClip[] _splashClips;
     public IngredientData IngredientData;
 
     private bool _dragging;
     private bool _onCauldron;
     private Camera _camera;
     private Vector3 _initialPosition;
+    private bool _canInteract;
 
     private IngredientsAnimator _animator;
     
@@ -21,8 +24,8 @@ public class Ingredient : MonoBehaviour
         _camera = Camera.main;
         _initialPosition = transform.position;
         _animator = new IngredientsAnimator { _animator = GetComponent<Animator>() };
-        
-        MessageBus.Instance.Subscribe<DropIngredientEvent>(evt => PutInCauldron(evt.Ingredient));
+        MessageBus.Instance.Subscribe<NewRecipeEvent>(_ => _canInteract = true);
+        MessageBus.Instance.Subscribe<WrongIngredientEvent>(_ => _canInteract = false);
     }
 
     private void Update()
@@ -43,8 +46,8 @@ public class Ingredient : MonoBehaviour
 
     private void OnMouseDown()
     {
-        _dragging = true;
-        MessageBus.Instance.Publish(Input.mousePosition);
+        if (_canInteract)
+            _dragging = true;
     }
 
     private void OnMouseUp()
@@ -60,15 +63,16 @@ public class Ingredient : MonoBehaviour
     private void PublishDestroyCommand()
     {
         MessageBus.Instance.Publish(new DropIngredientEvent {Ingredient = this});
+        PutInCauldron();
     }
 
-    private void PutInCauldron(Ingredient ingredient) {
-        if (this == ingredient)     
-        { 
-            _animator.PlayDropingInCauldron();
-            StartCoroutine("DestroyIngredient");
-            _collider.enabled = false;
-        }
+    private void PutInCauldron() 
+    {
+        _animator.PlayDropingInCauldron();
+        StartCoroutine("DestroyIngredient");
+        _collider.enabled = false;
+        _splashAudio.clip = _splashClips.SelectRandom();
+        _splashAudio.PlayDelayed(0.5f);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
