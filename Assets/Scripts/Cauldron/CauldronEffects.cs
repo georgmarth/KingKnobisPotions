@@ -56,12 +56,12 @@ public class CauldronEffects : MonoBehaviour
 
     public void PotionCorrect(Potion potion) {
         _audioSourceWinAndLoss.clip = _successSound;
-        _audioSourceWinAndLoss.PlayDelayed(0.9f);
+        _audioSourceWinAndLoss.PlayDelayed(0.7f);
     }
 
     public void WrongIngredient() {
         _audioSourceWinAndLoss.clip = _failureSound;
-        _audioSourceWinAndLoss.PlayDelayed(0.9f);
+        _audioSourceWinAndLoss.PlayDelayed(0.7f);
     }
 
     private void StopAllParticles() {
