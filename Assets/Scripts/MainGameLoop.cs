@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public enum GameState
 {
@@ -31,6 +32,12 @@ public class MainGameLoop : Singleton<MainGameLoop>
         MessageBus.Instance.Publish(new NewRecipeEvent {Recipe = CurrentRecipe});
     }
 
+    private IEnumerator CreateDelayedRecipe()
+    {
+        yield return new WaitForSeconds(1.5f);
+        CreateNewRecipe();
+    }
+
     private void Start()
     {
         MessageBus.Instance.Subscribe<TimeElapsedEvent>(OnTimeElapsed);
@@ -49,12 +56,12 @@ public class MainGameLoop : Singleton<MainGameLoop>
 
     private void OnPotionCorrect(PotionCorrectEvent evt)
     {
-        CreateNewRecipe();
+        StartCoroutine(CreateDelayedRecipe());
     }
 
     private void OnWrongIngredient(WrongIngredientEvent evt)
     {
-        CreateNewRecipe();
+        StartCoroutine(CreateDelayedRecipe());
     }
 
     private void GameOver()
