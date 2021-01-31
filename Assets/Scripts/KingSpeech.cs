@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Audio;
 
 public class KingSpeech : MonoBehaviour
@@ -6,7 +7,7 @@ public class KingSpeech : MonoBehaviour
     [SerializeField] private AudioMixer _mixer;
     [SerializeField] private AudioSource _kingSpeech;
 
-    private void Start()
+    private void Awake()
     {
         MessageBus.Instance.Subscribe<GameState>(OnGameStateChanged);
     }
