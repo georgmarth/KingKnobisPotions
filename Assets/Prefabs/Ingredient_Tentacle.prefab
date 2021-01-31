@@ -1,4 +1,4 @@
-%YAML 1.1
+﻿%YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1 &3730494232325518409
 GameObject:
@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3730494232325518404}
   - component: {fileID: 2528886695911194620}
   m_Layer: 0
-  m_Name: Ingredient A
+  m_Name: Ingredient_Tentacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3730494232325518409}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.1273828, y: 0.22825654, z: -0.40342784}
-  m_LocalScale: {x: 10.462258, y: 10.353872, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 9009939910336680597}
   m_Father: {fileID: 0}
@@ -59,7 +59,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 3.7309604, y: 3.7309601}
   m_EdgeRadius: 0
 --- !u!114 &3730494232325518405
 MonoBehaviour:
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shouldReset: 1
   _spriteRenderer: {fileID: 7833550317260347151}
-  IngredientData: {fileID: 11400000, guid: b1ed63c5a1005e84b9d77a00f39aa5aa, type: 2}
+  IngredientData: {fileID: 11400000, guid: f897e347b0fde0d4881fbf025d47060f, type: 2}
 --- !u!50 &3730494232325518404
 Rigidbody2D:
   serializedVersion: 4
@@ -186,8 +186,8 @@ SpriteRenderer:
   m_SortingLayerID: 655189233
   m_SortingLayer: -3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Sprite: {fileID: 21300000, guid: 9f1677d5909a31246b1e31439c161486, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
