@@ -16,11 +16,14 @@ public class ScoreDisplay : MonoBehaviour
     private void UpdateScoreDisplay(ScoreUpdatedEvent obj)
     {
         _scoreText.text = obj.Score.ToString();
-        _addedScoreText.text = obj.NewPoints.ToString();
-        
-        if (obj.NewPoints > 0)
-            _addedScoreAnimator.SetTrigger("Added");
-        else if (obj.NewPoints < 0)
-            _addedScoreAnimator.SetTrigger("Removed");
+        if (_addedScoreText != null)
+        {
+            _addedScoreText.text = obj.NewPoints.ToString();
+
+            if (obj.NewPoints > 0)
+                _addedScoreAnimator.SetTrigger("Added");
+            else if (obj.NewPoints < 0)
+                _addedScoreAnimator.SetTrigger("Removed");
+        }
     }
 }

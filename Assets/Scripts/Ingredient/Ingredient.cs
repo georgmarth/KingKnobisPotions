@@ -6,6 +6,8 @@ public class Ingredient : MonoBehaviour
     [SerializeField] private bool _shouldReset;
     [SerializeField] public SpriteRenderer _spriteRenderer;
     [SerializeField] private Collider2D _collider;
+    [SerializeField] private AudioSource _splashAudio;
+    [SerializeField] private AudioClip[] _splashClips;
     public IngredientData IngredientData;
 
     private bool _dragging;
@@ -21,8 +23,6 @@ public class Ingredient : MonoBehaviour
         _camera = Camera.main;
         _initialPosition = transform.position;
         _animator = new IngredientsAnimator { _animator = GetComponent<Animator>() };
-        
-        MessageBus.Instance.Subscribe<DropIngredientEvent>(evt => PutInCauldron(evt.Ingredient));
     }
 
     private void Update()
@@ -60,15 +60,16 @@ public class Ingredient : MonoBehaviour
     private void PublishDestroyCommand()
     {
         MessageBus.Instance.Publish(new DropIngredientEvent {Ingredient = this});
+        PutInCauldron();
     }
 
-    private void PutInCauldron(Ingredient ingredient) {
-        if (this == ingredient)     
-        { 
-            _animator.PlayDropingInCauldron();
-            StartCoroutine("DestroyIngredient");
-            _collider.enabled = false;
-        }
+    private void PutInCauldron() 
+    {
+        _animator.PlayDropingInCauldron();
+        StartCoroutine("DestroyIngredient");
+        _collider.enabled = false;
+        _splashAudio.clip = _splashClips.SelectRandom();
+        _splashAudio.PlayDelayed(0.5f);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
