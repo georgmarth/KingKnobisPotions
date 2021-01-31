@@ -16,10 +16,10 @@ public class ScoreSystem : Singleton<ScoreSystem>
     private void OnGameStateChanged(GameState gameState)
     {
         if (gameState == GameState.Running)
-            UpdateScore(0);
+            SetScore(0);
     }
 
-    private void OnPotionInCorrect(WrongIngredientEvent obj)
+    private void OnPotionInCorrect(WrongIngredientEvent evt)
     {
         UpdateScore(_scoreSettings.FailPoints);
     }
@@ -34,5 +34,11 @@ public class ScoreSystem : Singleton<ScoreSystem>
         Score += points;
         Score = Mathf.Max(Score, 0);
         MessageBus.Instance.Publish(new ScoreUpdatedEvent{Score = Score, NewPoints = points});
+    }
+
+    private void SetScore(int points)
+    {
+        Score = points;
+        MessageBus.Instance.Publish(new ScoreUpdatedEvent{Score = Score});
     }
 }
