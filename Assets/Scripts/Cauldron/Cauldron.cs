@@ -8,6 +8,7 @@ public class Cauldron : MonoBehaviour {
     private Potion _potion;
     private CauldronEffects _effects;
     [SerializeField] SpriteRenderer _renderer;
+
     [SerializeField] GameObject _ingredientsUI;
 
     public bool canAddIngredient = true;

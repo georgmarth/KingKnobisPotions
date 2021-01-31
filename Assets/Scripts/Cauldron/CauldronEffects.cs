@@ -7,6 +7,7 @@ public class CauldronEffects
     [SerializeField] SpriteRenderer _renderer;
 
 
+
     public CauldronEffects(SpriteRenderer renderer) {
         _renderer = renderer;
 
