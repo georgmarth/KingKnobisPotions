@@ -10,6 +10,7 @@ public class KingSpeech : MonoBehaviour
     private void Awake()
     {
         MessageBus.Instance.Subscribe<GameState>(OnGameStateChanged);
+        OnGameStateChanged(GameState.TitleScreen);
     }
 
     private void OnGameStateChanged(GameState state)
