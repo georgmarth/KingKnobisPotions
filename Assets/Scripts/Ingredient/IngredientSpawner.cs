@@ -1,35 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class IngredientSpawner : MonoBehaviour
 {
     [SerializeField] private Ingredient _ingredient;
 
     private Transform _spawnArea;
-    void Start() {
-        _spawnArea = transform.GetChild(0).transform;
+    void Start()
+    {
+        _spawnArea = transform;
         SpawnIngredient();
 
-        MessageBus.Instance.Subscribe<DropIngredientEvent>(evt => TrySpawnIngredient(evt));
+        MessageBus.Instance.Subscribe<DropIngredientEvent>(TrySpawnIngredient);
     }
 
 
-    void Update()
+    private void TrySpawnIngredient(DropIngredientEvent evt) 
     {
-        
-    }
-
-
-    private void TrySpawnIngredient(DropIngredientEvent evt) {
-        if(_ingredient.IngredientData == evt.Ingredient.IngredientData) {
+        if(_ingredient.IngredientData == evt.Ingredient.IngredientData) 
+        {
             SpawnIngredient();
         }
     }
-    
-
-
-    public void SpawnIngredient() {
-        var ingredient = Instantiate(_ingredient, _spawnArea.position, _spawnArea.rotation);
+    private void SpawnIngredient() 
+    {
+        Instantiate(_ingredient, _spawnArea.position, _spawnArea.rotation);
     }
 }

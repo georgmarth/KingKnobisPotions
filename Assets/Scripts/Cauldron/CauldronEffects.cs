@@ -35,7 +35,7 @@ public class CauldronEffects : MonoBehaviour
 
     private void NewIngredient(Ingredient ingredient)
     {
-        var correctMapping = _effectMappings.First(mapping => mapping.IngredientData == ingredient.IngredientData);
+        var correctMapping = _effectMappings.FirstOrDefault(mapping => mapping.IngredientData == ingredient.IngredientData);
         if (correctMapping != null)
         {
             if (correctMapping.Color != null) {
