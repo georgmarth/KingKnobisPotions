@@ -46,7 +46,7 @@ public class CauldronEffects : MonoBehaviour
                 
             }
             if (correctMapping.ParticleEffect != null) {
-
+                correctMapping.ParticleEffect.Play();
             }
         }
     }

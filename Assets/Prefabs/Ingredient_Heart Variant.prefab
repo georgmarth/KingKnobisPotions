@@ -1,4 +1,4 @@
-﻿%YAML 1.1
+%YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1001 &2388180236444315525
 PrefabInstance:
@@ -71,7 +71,7 @@ PrefabInstance:
     - target: {fileID: 3730494232325518409, guid: 6515d047b1ef48d46a0f46b92cb3a3ac,
         type: 3}
       propertyPath: m_Name
-      value: Ingredient_Heart
+      value: Ingredient_Heart Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7833550317260347151, guid: 6515d047b1ef48d46a0f46b92cb3a3ac,
         type: 3}
