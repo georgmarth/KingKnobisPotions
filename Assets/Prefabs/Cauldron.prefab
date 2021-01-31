@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1257913077243125186}
   - component: {fileID: 863385335425250076}
   m_Layer: 0
-  m_Name: Basic Fog
+  m_Name: Basic Frost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14854,23 +14854,23 @@ MonoBehaviour:
   audioSource: {fileID: 4546095856318548411}
   _renderer: {fileID: 6494895188425792270}
   _effectMappings:
-  - IngredientData: {fileID: 0}
+  - IngredientData: {fileID: 11400000, guid: eb1f31e117c022e40b919ea2a67c4091, type: 2}
     SoundEffect: {fileID: 0}
-    ParticleEffect: {fileID: 0}
+    ParticleEffect: {fileID: 5295031556761135215}
     Color: {r: 0, g: 0, b: 0, a: 0}
-  - IngredientData: {fileID: 0}
+  - IngredientData: {fileID: 11400000, guid: 6d630ed72ecece14db719263059ee628, type: 2}
     SoundEffect: {fileID: 0}
-    ParticleEffect: {fileID: 0}
+    ParticleEffect: {fileID: 1257913077243125186}
     Color: {r: 0, g: 0, b: 0, a: 0}
-  - IngredientData: {fileID: 0}
+  - IngredientData: {fileID: 11400000, guid: 1d2f947d1df219d46a56936cf6fc99f4, type: 2}
     SoundEffect: {fileID: 0}
-    ParticleEffect: {fileID: 0}
+    ParticleEffect: {fileID: 3830414359584842231}
     Color: {r: 0, g: 0, b: 0, a: 0}
-  - IngredientData: {fileID: 0}
+  - IngredientData: {fileID: 11400000, guid: 19b4523a0c4f8a34c98187f7e721bf8a, type: 2}
     SoundEffect: {fileID: 0}
-    ParticleEffect: {fileID: 0}
+    ParticleEffect: {fileID: 7196230271610166135}
     Color: {r: 0, g: 0, b: 0, a: 0}
-  - IngredientData: {fileID: 0}
+  - IngredientData: {fileID: 11400000, guid: 9151fc4e6f20eb147983727b111171b8, type: 2}
     SoundEffect: {fileID: 0}
     ParticleEffect: {fileID: 0}
     Color: {r: 0, g: 0, b: 0, a: 0}
@@ -15089,7 +15089,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5401580462178816937
 Transform:
   m_ObjectHideFlags: 0
@@ -19843,7 +19843,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8466565966648424459
 Transform:
   m_ObjectHideFlags: 0
