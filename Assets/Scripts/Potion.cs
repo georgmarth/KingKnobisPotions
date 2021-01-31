@@ -28,7 +28,9 @@ public class Potion
         _ingredients.Contains(Recipe.SymbolIngredient);
 
     public bool IsWrong =>
-        _ingredients.Count > 2 || _ingredients.Any(ingredient =>
+        _ingredients.Count > 2 ||
+        _ingredients.Any(ingredient =>
             !ReferenceEquals(Recipe.ColorIngredient, ingredient) &&
-            !ReferenceEquals(Recipe.SymbolIngredient, ingredient));
+            !ReferenceEquals(Recipe.SymbolIngredient, ingredient)) ||
+        _ingredients.GroupBy(data => data).Any(grouping => grouping.Count() > 1);
 }
