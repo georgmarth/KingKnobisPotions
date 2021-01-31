@@ -14720,7 +14720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72838f14823458543aef6b434ab6d851, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _effects: {fileID: 0}
+  _effects: {fileID: 2060661863996136051}
   _renderer: {fileID: 6494895188425792270}
   _ingredientsUI: {fileID: 786072469947138501}
   canAddIngredient: 1

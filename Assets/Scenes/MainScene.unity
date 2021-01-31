@@ -187,12 +187,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &406471807 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 6494895188425792270, guid: 71f9a9f62e1915b4dad5b9006d2ef819,
-    type: 3}
-  m_PrefabInstance: {fileID: 5764807042343456652}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &531164081
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -614,53 +608,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1196038761 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5764807043290000054, guid: 71f9a9f62e1915b4dad5b9006d2ef819,
-    type: 3}
-  m_PrefabInstance: {fileID: 5764807042343456652}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1196038762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196038761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff398de4d7fb0be4aba509c685de3cf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _renderer: {fileID: 406471807}
-  _effectMappings:
-  - IngredientData: {fileID: 0}
-    SoundEffect: {fileID: 0}
-    ParticleEffect: {fileID: 0}
-  - IngredientData: {fileID: 0}
-    SoundEffect: {fileID: 0}
-    ParticleEffect: {fileID: 0}
-  - IngredientData: {fileID: 0}
-    SoundEffect: {fileID: 0}
-    ParticleEffect: {fileID: 0}
-  - IngredientData: {fileID: 0}
-    SoundEffect: {fileID: 0}
-    ParticleEffect: {fileID: 0}
-  - IngredientData: {fileID: 0}
-    SoundEffect: {fileID: 0}
-    ParticleEffect: {fileID: 0}
-  _successEffect:
-    IngredientData: {fileID: 0}
-    SoundEffect: {fileID: 0}
-    ParticleEffect: {fileID: 0}
-  _failureEffect:
-    IngredientData: {fileID: 0}
-    SoundEffect: {fileID: 0}
-    ParticleEffect: {fileID: 0}
-  _idleEffect:
-    IngredientData: {fileID: 0}
-    SoundEffect: {fileID: 0}
-    ParticleEffect: {fileID: 0}
 --- !u!1 &1683465085
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,11 +1218,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4546095856318548411, guid: 71f9a9f62e1915b4dad5b9006d2ef819,
-        type: 3}
-      propertyPath: m_Pitch
-      value: -2.91
-      objectReference: {fileID: 0}
     - target: {fileID: 5764807043290000049, guid: 71f9a9f62e1915b4dad5b9006d2ef819,
         type: 3}
       propertyPath: m_RootOrder
@@ -1336,11 +1278,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cauldron
       objectReference: {fileID: 0}
-    - target: {fileID: 6897274473440725124, guid: 71f9a9f62e1915b4dad5b9006d2ef819,
-        type: 3}
-      propertyPath: _effects
-      value: 
-      objectReference: {fileID: 1196038762}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71f9a9f62e1915b4dad5b9006d2ef819, type: 3}
 --- !u!1001 &6298480490678336628
