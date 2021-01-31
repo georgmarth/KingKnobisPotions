@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -24,11 +25,10 @@ public class CauldronEffects : MonoBehaviour
     public void FreshPotion() 
     {
         //stop VfX
+        StopAllParticles();
         _renderer.color = _idleEffect.Color;
         _bubbleMaterial.color = _idleEffect.Color;
         _idleEffect.ParticleEffect.Play();
-        
-
         
     }
 
@@ -57,6 +57,12 @@ public class CauldronEffects : MonoBehaviour
 
     public void WrongIngredient() {
         
+    }
+
+    private void StopAllParticles() {
+        foreach (EffectMapping em in _effectMappings) {
+            if(em.ParticleEffect) em.ParticleEffect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+        }
     }
 }
 
